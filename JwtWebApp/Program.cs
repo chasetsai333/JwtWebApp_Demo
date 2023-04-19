@@ -1,9 +1,14 @@
+using JwtWebApp.Infrastructure.Helpers;
+using JwtWebApp.Infrastructures.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<JwtHelper>();
 
 var app = builder.Build();
 
@@ -23,6 +28,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+app.MapJwtRouter();
 
 app.MapControllerRoute(
     name: "default",

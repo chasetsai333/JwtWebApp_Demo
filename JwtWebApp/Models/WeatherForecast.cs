@@ -1,4 +1,4 @@
-namespace JwtWebApp
+namespace JwtWebApp.Models
 {
     public class WeatherForecast
     {

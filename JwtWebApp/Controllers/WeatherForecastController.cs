@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JwtWebApp.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace JwtWebApp.Controllers
 {
